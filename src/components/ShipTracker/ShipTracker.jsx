@@ -6,7 +6,7 @@ import styles from './ShipTracker.module.css';
 
 const ShipTracker = () => {
     return(
-        <div>
+        <div className={styles["ship-container"]}>
             <ShipForm />
             <ShipList />
         </div>

@@ -1,16 +1,30 @@
 import React from 'react';
-
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';  // Use NavLink instead of Link
 import styles from './NavBar.module.css';
 
 const NavBar = () => {
     return (
         <div>
-            <div>
-                <div>
-                    <Link to={"/counter"}>Counter</Link>
-                    <Link to={"/shiptracker"}>Ship Docks Tracker</Link>
-                    <Link to={"/goaltracker"}>Goals Tracker</Link>
+            <div className={styles["nav-bar"]}>
+                <div className={styles["nav-bar-cards"]}>
+                    <NavLink
+                        className={({ isActive }) => `${styles["nav-bar-card"]} ${isActive ? styles.active : ""}`}
+                        to={"/counter"}
+                    >
+                        Counter
+                    </NavLink>
+                    <NavLink
+                        className={({ isActive }) => `${styles["nav-bar-card"]} ${isActive ? styles.active : ""}`}
+                        to={"/shiptracker"}
+                    >
+                        Ship Docks Tracker
+                    </NavLink>
+                    <NavLink
+                        className={({ isActive }) => `${styles["nav-bar-card"]} ${isActive ? styles.active : ""}`}
+                        to={"/goaltracker"}
+                    >
+                        Goals Tracker
+                    </NavLink>
                 </div>
             </div>
         </div>

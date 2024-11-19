@@ -11,7 +11,7 @@ const GoalTracker = lazy(() => import ('../GoalTracker/GoalTracker'));
 const App = () => {
   return (
     // The `App` component renders a `container` div that holds the `Counter` component.
-    <div className="container">
+    <div>
       <NavBar />
       <Suspense>
         <Routes>

@@ -1,0 +1,38 @@
+.nav-bar {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #616467;
+    width: 100%;
+    position: sticky;
+    top: 0px;
+}
+
+.nav-bar-cards {
+    display: flex;
+    align-items: center;
+
+    flex-grow: 1;
+}
+
+.nav-bar-card {
+    flex: 1;
+    height: 100%;
+    padding: 1rem 2rem;
+
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+
+.nav-bar-card:hover {
+    transition: 450ms;
+    background-color: #4b4c4e;
+}
+
+.nav-bar-card.active {
+    background-color: #4b4c4e;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Rubik:500');

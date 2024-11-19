@@ -5,6 +5,8 @@ import { Provider } from "react-redux";
 import App from "./components/App/App";
 import store from "./redux/store"; // Import redux store
 
+import "./index.css";
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   // The `<Provider>` component allows components within its tree to access the Redux `store`.

@@ -42,7 +42,8 @@ const ShipForm = () => {
 
     return (
         <div>
-            <form onSubmit={handleFormSubmit}>
+            <form className={styles["container"]} onSubmit={handleFormSubmit}>
+                <label htmlFor="name">Ship Name</label>
                 <input 
                     type="text"
                     name="name"
