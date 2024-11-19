@@ -3,11 +3,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #222222; /* Background similar to the goal list */
+  background-color: #222222;
   padding: 4rem 2rem; /* Adjust padding for consistency */
   width: 100%;
-  max-width: 400px; /* Match width with GoalForm or GoalList */
-  margin: 2rem auto; /* Center the counter card */
+  max-width: 400px; 
+  margin: 2rem auto;
   justify-content: center; /* Ensure content is centered vertically */
 }
 

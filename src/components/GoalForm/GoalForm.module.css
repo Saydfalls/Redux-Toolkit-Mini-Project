@@ -118,7 +118,7 @@
 /* Paper Plane Icon */
 .submit-button::before {
     content: "▶"; /* Right arrow character */
-    font-size: 1.2rem; /* Smaller size for the arrow */
+    font-size: 1.2rem;
     color: white;
     font-weight: bold;
     margin-left: 4px;

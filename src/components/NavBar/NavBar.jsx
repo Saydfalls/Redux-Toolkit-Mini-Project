@@ -9,6 +9,12 @@ const NavBar = () => {
                 <div className={styles["nav-bar-cards"]}>
                     <NavLink
                         className={({ isActive }) => `${styles["nav-bar-card"]} ${isActive ? styles.active : ""}`}
+                        to={"/"}
+                    >
+                        Home
+                    </NavLink>
+                    <NavLink
+                        className={({ isActive }) => `${styles["nav-bar-card"]} ${isActive ? styles.active : ""}`}
                         to={"/counter"}
                     >
                         Counter
