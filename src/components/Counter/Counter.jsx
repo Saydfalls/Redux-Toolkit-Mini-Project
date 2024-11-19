@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { increment, decrement } from "../redux/actions/counterAction";
+import { increment, decrement } from "../../redux/actions/counterAction";
 
 const Counter = () => {
   const counter = useSelector((state => state.counter)); // useSelector accesses counter state from the redux store
