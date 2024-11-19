@@ -6,7 +6,7 @@ import styles from './GoalTracker.module.css';
 
 const GoalTracker = () => {
     return (
-        <div>
+        <div className={styles["goal-container"]}>
             <GoalForm />
             <GoalList />
         </div>

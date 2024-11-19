@@ -1,38 +1,36 @@
 .nav-bar {
-    display:flex;
+    display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
     background-color: #616467;
     width: 100%;
-    position: sticky;
-    top: 0px;
+    position: fixed; /* Changed to fixed for a true sticky effect */
+    top: 0; /* Stick to the top */
+    z-index: 1000; /* Ensure it stays above other content */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for visibility */
 }
 
 .nav-bar-cards {
     display: flex;
     align-items: center;
-
     flex-grow: 1;
 }
 
 .nav-bar-card {
     flex: 1;
-    height: 100%;
     padding: 1rem 2rem;
-
     color: white;
     text-decoration: none;
     text-align: center;
+    height: 100%;
 }
 
 .nav-bar-card:hover {
-    transition: 450ms;
+    transition: 200ms;
     background-color: #4b4c4e;
 }
 
 .nav-bar-card.active {
     background-color: #4b4c4e;
 }
-
-@import url('https://fonts.googleapis.com/css?family=Rubik:500');

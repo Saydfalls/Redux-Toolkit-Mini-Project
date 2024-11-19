@@ -1,7 +1,129 @@
-.container {
-    display: flex;
-    flex-direction: column;
-
-    text-align: center;
+/* Colors */
+:root {
+    --primary: #d3d3d3; 
+    --secondary: #b0b0b0; 
+    --button-primary: #9a9a9a; 
+    --button-secondary: #777777;
+    --white: #fff;
+    --gray: #9b9b9b;
+    --dark-gray: #222222;
 }
 
+/* Form Container */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #222222;
+    padding: 10px 60px 25px 60px;
+    width: 100%;
+    max-width: 350px;
+}
+
+/* Form Group */
+.form-group {
+    position: relative;
+    padding: 15px 0 0;
+    margin-top: 10px;
+    width: 100%;
+}
+
+/* Input Fields */
+.form-field {
+    font-family: inherit;
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid var(--gray);
+    outline: 0;
+    font-size: 1.3rem;
+    color: var(--white);
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+    box-sizing: border-box; /* Prevent size changes when focused */
+
+    /* Hide placeholder text */
+    &::placeholder {
+        color: transparent;
+    }
+
+    /* When input is empty, keep label in place */
+    &:placeholder-shown + .form-label {
+        font-size: 1.3rem;
+        cursor: text;
+        top: 20px;
+    }
+
+    /* When focused, emphasize the label and input */
+    &:focus {
+        border-width: 3px;
+        border-image: linear-gradient(to right, var(--primary), var(--secondary)); /* Lighter grayscale gradient */
+        border-image-slice: 1;
+        font-weight: 600;
+    }
+
+    &:focus + .form-label {
+        font-size: 1rem;
+        color: var(--primary);
+        font-weight: 6s00;
+        top: 0;
+    }
+
+    /* Remove shadows for validation states */
+    &:required,
+    &:invalid {
+        box-shadow: none;
+    }
+}
+
+/* Label Styling */
+.form-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.2s ease all;
+    font-size: 1rem;
+    color: var(--gray);
+}
+
+/* Dropdown (Select) Styling */
+select {
+    font-family: inherit;
+    font-size: 1.3rem;
+    color: var(--dark-gray);
+    background: transparent;
+    border: 0;
+    border-bottom: 2px solid var(--gray);
+    outline: 0;
+    padding: 7px 0;
+    transition: border-color 0.2s;
+}
+
+/* Dropdown Option Text Color */
+option {
+    color: var(--dark-gray);
+}
+
+/* Focus Effects for Select */
+select:focus {
+    border-width: 3px;
+    border-image: linear-gradient(to right, var(--primary), var(--secondary)); /* Lighter grayscale gradient */
+    border-image-slice: 1;
+}
+
+/* Button Styling */
+.submit-button {
+    background: linear-gradient(to right, var(--button-primary), var(--button-secondary));
+    color: var(--white);
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background: linear-gradient(to left, var(--button-primary), var(--button-secondary));
+    }
+}

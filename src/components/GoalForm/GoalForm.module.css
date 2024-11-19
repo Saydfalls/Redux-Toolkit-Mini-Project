@@ -1,0 +1,126 @@
+/* Colors */
+:root {
+    --primary: #d3d3d3; 
+    --secondary: #b0b0b0; 
+    --button-primary: #9a9a9a; 
+    --button-secondary: #777777;
+    --white: #fff;
+    --gray: #9b9b9b;
+    --dark-gray: #222222;
+}
+
+/* Form Container */
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #222222;
+    padding: 10px 60px 25px 60px;
+    width: 100%;
+    max-width: 500px;
+}
+
+/* Form */
+.form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+/* Form Group */
+.form-group {
+    position: relative;
+    flex: 1;
+    padding: 15px 0 0;
+    margin-top: 10px;
+}
+
+/* Input Fields */
+.form-field {
+    font-family: inherit;
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid var(--gray);
+    outline: 0;
+    font-size: 1.3rem;
+    color: var(--white);
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+    box-sizing: border-box;
+
+    &::placeholder {
+        color: transparent;
+    }
+
+    &:placeholder-shown + .form-label {
+        font-size: 1.3rem;
+        cursor: text;
+        top: 20px;
+    }
+
+    &:focus {
+        border-width: 3px;
+        border-image: linear-gradient(to right, var(--primary), var(--secondary));
+        border-image-slice: 1;
+        font-weight: 600;
+    }
+
+    &:focus + .form-label {
+        font-size: 1rem;
+        color: var(--primary);
+        font-weight: 600;
+        top: 0;
+    }
+
+    &:required,
+    &:invalid {
+        box-shadow: none;
+    }
+}
+
+/* Label Styling */
+.form-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.2s ease all;
+    font-size: 1rem;
+    color: var(--gray);
+}
+
+/* Paper Plane Button Styling */
+.submit-button {
+    position: relative;
+    width: 35px;
+    height: 35px;
+    border: none;
+    background: var(--button-primary);
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, transform 0.2s;
+    margin-top:30px;
+}
+
+.submit-button:hover {
+    background: var(--button-secondary);
+    transform: scale(1.1);
+}
+
+.submit-button:active {
+    transform: scale(1);
+}
+
+/* Paper Plane Icon */
+.submit-button::before {
+    content: "▶"; /* Right arrow character */
+    font-size: 1.2rem; /* Smaller size for the arrow */
+    color: white;
+    font-weight: bold;
+    margin-left: 4px;
+    margin-bottom: 2px;
+}

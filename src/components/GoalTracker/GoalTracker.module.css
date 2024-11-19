@@ -1,0 +1,15 @@
+.goal-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-image: url('https://plus.unsplash.com/premium_photo-1661963560000-cargo-goal-tracker.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top center;
+    background-attachment: fixed;
+    background-color: #282c34;
+
+    min-height: 100vh;
+    padding: 2rem;
+}

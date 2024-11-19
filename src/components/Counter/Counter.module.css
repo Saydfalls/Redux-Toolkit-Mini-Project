@@ -1,25 +1,25 @@
+/* Counter Card Container */
 .counter-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  padding-top: 4rem;
+  background-color: #222222; /* Background similar to the goal list */
+  padding: 4rem 2rem; /* Adjust padding for consistency */
+  width: 100%;
+  max-width: 400px; /* Match width with GoalForm or GoalList */
+  margin: 2rem auto; /* Center the counter card */
+  justify-content: center; /* Ensure content is centered vertically */
 }
 
+/* Base Button Styling */
 .nice-button {
-  margin: 1rem;
-
-  background-color: whitesmoke;
+  margin: 1rem 0;
   display: inline-block;
   outline: none;
   cursor: pointer;
   font-size: 14px;
   line-height: 1;
   border-radius: 500px;
-
-  transition-property: background-color,border-color,color,box-shadow,filter;
-  transition-duration: .3s;
-
   border: 1px solid transparent;
   letter-spacing: 2px;
   min-width: 160px;
@@ -28,11 +28,33 @@
   font-weight: 700;
   text-align: center;
   padding: 16px 14px 18px;
-  color: #616467;
   height: 48px;
+  color: white; /* Ensure button text is white */
 }
-  
-.nice-button:hover{
-  color: #fff;
-  background-color: #616467;
+
+/* Increment Button (Green) */
+.increment-button {
+  background-color: #4CAF50; /* Green */
+}
+
+.increment-button:hover {
+  transition-duration: 300ms;
+  background-color: #45a049; /* Darker Green on hover */
+}
+
+/* Decrement Button (Red) */
+.decrement-button {
+  background-color: #f44336; /* Red */
+}
+
+.decrement-button:hover {
+  transition-duration: 300ms;
+  background-color: #e53935; /* Darker Red on hover */
+}
+
+/* Centering the button container */
+.counter-card > div {
+  display: flex;
+  justify-content: center; /* Horizontally center the buttons */
+  gap: 1rem; /* Add space between the buttons */
 }

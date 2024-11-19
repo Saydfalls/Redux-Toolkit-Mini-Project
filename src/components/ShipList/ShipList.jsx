@@ -13,17 +13,17 @@ const ShipList = () => {
     };
 
     return (
-        <div>
+        <div className={styles["ship-list-container"]}>
             <ul>
                 {ships.map((ship) => (
-                    <li key={ship.id}>
+                    <li key={ship.id} className={styles["ship-card"]}>
                         <h2>
                             <span>Name:</span> {ship.name}
                         </h2>
                         <p>
                             <span>Type:</span> {ship.type}
                         </p>
-                        <button onClickCapture={() => handleRemoveShip(ship)}>Remove</button> {" "}
+                        <button onClickCapture={() => handleRemoveShip(ship)}>Remove</button> 
                     </li>
                 ))}
             </ul>

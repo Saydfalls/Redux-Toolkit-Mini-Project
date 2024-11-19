@@ -1,0 +1,68 @@
+/* Main Container for Ship List */
+.ship-list-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #222222;
+    padding: 10px 60px 25px 60px; /* Same padding as ShipForm */
+    width: 100%;
+    max-width: 350px; /* Match the max-width of ShipForm */
+}
+
+/* List Styling */
+ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+}
+
+/* Individual Ship Cards */
+.ship-card {
+    background-color: #333333; /* Slightly lighter background for individual cards */
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+    border: 2px solid var(--gray);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.ship-card:hover {
+    transform: translateY(-5px); /* Slight hover effect */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* Subtle shadow effect */
+}
+
+/* Ship Name and Type Text */
+.ship-card h2, .ship-card p {
+    color: var(--white);
+    font-size: 1.3rem;
+}
+
+/* Span for Ship Labels (e.g., Name, Type) */
+.ship-card span {
+    font-weight: 700;
+    color: var(--primary);
+}
+
+/* Remove Button Styling */
+.ship-card button {
+    background-color: var(--primary);
+    color: var(--white);
+    border: none;
+    padding: 8px 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.ship-card button:hover {
+    background-color: var(--secondary);
+    transform: translateY(-2px); /* Subtle hover effect */
+}
+
+.ship-card button:active {
+    transform: translateY(1px); /* Button presses slightly down */
+}

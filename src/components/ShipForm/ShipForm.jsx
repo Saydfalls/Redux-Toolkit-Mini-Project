@@ -23,16 +23,8 @@ const ShipForm = () => {
 
     const handleChange = (e) => {
         const { name, value } = e.currentTarget;
-        switch(name) {
-            case "name":
-                setName(value);
-                break;
-            case "type":
-                setType(value);
-                break;
-            default:
-                return;
-        }  
+        if (name === "name") setName(value);
+        if (name === "type") setType(value);
     };
 
     const resetForm = () => {
@@ -41,26 +33,48 @@ const ShipForm = () => {
     };
 
     return (
-        <div>
-            <form className={styles["container"]} onSubmit={handleFormSubmit}>
-                <label htmlFor="name">Ship Name</label>
-                <input 
-                    type="text"
-                    name="name"
-                    id="name"
-                    value={name}
-                    onChange={handleChange}
-                    autoComplete='off'
-                />
-                <label htmlFor="type">Ship Type</label>
-                <select id="type" name="type" onChange={handleChange} value={type}>
-                    <option value="Container">Container</option>
-                    <option value="Bulk">Bulk</option>
-                    <option value="Tanker">Tanker</option>
-                </select>
-                <button>Add Ship</button>
+        <div className={styles["form-container"]}>
+            <form onSubmit={handleFormSubmit}>
+                {/* Floating Label Input for Name */}
+                <div className={styles["form-group"]}>
+                    <input
+                        type="text"
+                        className={styles["form-field"]}
+                        placeholder="Enter ship name"
+                        name="name"
+                        id="name"
+                        value={name}
+                        onChange={handleChange}
+                        required
+                    />
+                    <label htmlFor="name" className={styles["form-label"]}>
+                        Ship Name
+                    </label>
+                </div>
+
+                {/* Dropdown for Type */}
+                <div className={styles["form-group"]}>
+                    <label htmlFor="type" className={styles["form-label"]}>
+                        Ship Type
+                    </label>
+                    <select
+                        id="type"
+                        name="type"
+                        className={styles["form-field"]}
+                        onChange={handleChange}
+                        value={type}
+                    >
+                        <option value="Container">Container</option>
+                        <option value="Bulk">Bulk</option>
+                        <option value="Tanker">Tanker</option>
+                    </select>
+                </div>
+
+                <button type="submit" className={styles["submit-button"]}>
+                    Add Ship
+                </button>
             </form>
-        </div>  
+        </div>
     );
 };
 
