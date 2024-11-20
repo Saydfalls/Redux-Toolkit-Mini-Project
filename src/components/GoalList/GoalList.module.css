@@ -27,6 +27,8 @@ ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    word-break: break-all;
+    gap: 15px;
 }
 
 .goal-card:hover {
