@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from "react-redux";
-import { removeShip } from "../../redux/actions/shipAction";
+import { removeShip } from "../../../redux/actions/shipAction";
 
 import styles from './ShipList.module.css';
 

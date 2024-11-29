@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { removeGoal } from "../../redux/actions/goalAction";
+import { removeGoal } from "../../../redux/actions/goalAction";
 
 import styles from "./GoalList.module.css";
 

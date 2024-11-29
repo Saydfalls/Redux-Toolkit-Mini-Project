@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addShip } from '../../redux/actions/shipAction';
+import { addShip } from '../../../redux/actions/shipAction';
 
 import styles from './ShipForm.module.css';
 

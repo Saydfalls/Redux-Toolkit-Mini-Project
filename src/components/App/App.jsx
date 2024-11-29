@@ -6,8 +6,8 @@ import { Routes, Route } from "react-router-dom";
 
 const HomePage = lazy(() => import('../HomePage/HomePage'));
 const Counter = lazy(() => import('../Counter/Counter'));
-const ShipTracker = lazy(() => import('../ShipTracker/ShipTracker'));
-const GoalTracker = lazy(() => import ('../GoalTracker/GoalTracker'));
+const ShipTracker = lazy(() => import('../ShipPage/ShipTracker/ShipTracker'));
+const GoalTracker = lazy(() => import ('../GoalPage/GoalTracker/GoalTracker'));
 
 const App = () => {
   return (
